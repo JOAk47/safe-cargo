@@ -1,2 +1,3 @@
 args = "run --example=read-ssh-key"
+status = "failed"
 fs.cwd = "../.."

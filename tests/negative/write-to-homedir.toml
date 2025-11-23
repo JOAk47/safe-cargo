@@ -1,2 +1,3 @@
 args = "run --example=write-to-homedir"
+status = "failed"
 fs.cwd = "../.."

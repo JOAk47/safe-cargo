@@ -1,9 +1,10 @@
 use crate::seatbelt::{Filter, Operation, Profile, allow, deny};
+use std::process::ExitCode;
 use std::{collections::VecDeque, env, fs, io, path::Path, process::Command};
 
 /// This crate is available only on macOS becuase it relies on `sandbox-exec` cli tool
 #[cfg(target_os = "macos")]
-fn main() -> Result<(), io::Error> {
+fn main() -> Result<ExitCode, io::Error> {
     let mut args = env::args().collect::<VecDeque<_>>();
 
     // skipping program name
@@ -25,12 +26,12 @@ fn main() -> Result<(), io::Error> {
     let sandbox_profile = prepare_profile(&workspace_path, &sandbox_path)?;
     if args.iter().any(|o| *o == "--dump-profile") {
         println!("{}", sandbox_profile);
-        return Ok(());
+        return Ok(ExitCode::SUCCESS);
     }
     let profile_path = sandbox_path.join("profile.sb");
     fs::write(&profile_path, sandbox_profile.to_string())?;
 
-    Command::new("sandbox-exec")
+    let result = Command::new("sandbox-exec")
         .arg("-f")
         .arg(profile_path)
         .arg("cargo")
@@ -39,7 +40,12 @@ fn main() -> Result<(), io::Error> {
         .env("CARGO_HOME", sandbox_path.join("cargo"))
         .spawn()?
         .wait()?;
-    Ok(())
+
+    let code = match result.code() {
+        Some(0) => ExitCode::SUCCESS,
+        _ => ExitCode::FAILURE,
+    };
+    Ok(code)
 }
 
 fn prepare_profile(workspace: &Path, sandbox: &Path) -> Result<Profile, io::Error> {
