@@ -19,7 +19,7 @@ $ cargo install safe-cargo
 Using is pretty simple, you can use any `cargo` command:
 
 ```console
-$ safe-cargo buld
+$ safe-cargo build
 $ safe-cargo test
 $ safe-cargo run
 ```
@@ -30,11 +30,11 @@ Or any other cargo command.
 
 ## Read access
 
-Sandobx allow access to list all files (without reading their content), and read/execute following files and directories:
+Sandbox allow access to list all files (without reading their content), and read/execute following files and directories:
 
  - `/dev/random` and `/dev/urandom`
  - `/dev/tty`
- - All files in `PATH` directiories
+ - All files in `PATH` directories
  - All files in following directories (and subdirectories):
     - `/private/etc/`
     - `/private/var/db/timezone/`

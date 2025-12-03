@@ -5,7 +5,7 @@ use std::{
     process::{Command, ExitCode},
 };
 
-/// This crate is available only on macOS becuase it relies on `sandbox-exec` cli tool
+/// This crate is available only on macOS because it relies on `sandbox-exec` cli tool
 #[cfg(target_os = "macos")]
 fn main() -> Result<ExitCode, io::Error> {
     const CARGO_TARGET_DIR: &str = "CARGO_TARGET_DIR";
