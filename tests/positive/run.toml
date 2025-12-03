@@ -1,2 +1,2 @@
-args = "run"
-fs.cwd = "test-project"
+args = "run --example println"
+fs.cwd = "../.."
