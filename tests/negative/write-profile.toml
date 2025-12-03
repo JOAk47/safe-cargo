@@ -1,0 +1,3 @@
+args = "run --example=write-profile"
+status = "failed"
+fs.cwd = "../.."
